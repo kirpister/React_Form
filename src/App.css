@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto+Slab:wght@300&display=swap');
+
+body {
+  background: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin: 4rem;
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+label {
+  font-family: 'Gruppo', sans-serif;
+  margin: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-family: 'Gruppo', sans-serif;
+  margin-top: 5px;
+  margin-left: 2.8rem;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-family: 'Gruppo', sans-serif;
+  margin-left: 2.5rem;
+  margin-top: 1.1rem;
+  color: #333;
+}
+
+input,
+textarea,
+select {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+  width: 195px;
+  color: #333;
+}
+
+select {
+  width: 213px;
+}
+
+button {
+  background: #333;
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  width: 210px;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.form-view {
+  display: inline-block;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 60vw;
+  height: 33vh;
+  border-radius: 1rem;
+ 	background: repeating-linear-gradient(
+							to bottom, 
+							transparent 0, 
+							white 30px, 
+							lightblue 30px, 
+							lightblue 32px),
+							linear-gradient(
+							to right,
+							white 0, 
+							white 2rem, 
+							lightpink 2rem,
+							lightpink 2.2rem,
+							white 2.2rem);
+}
+
+.modal {
+  position: absolute;
+  top: 25%;
+  width: 60vw;
+  height: 45vh;
+  border-radius: 1rem;
+ 	background: repeating-linear-gradient(
+							to bottom, 
+							transparent 0, 
+							white 30px, 
+							lightblue 30px, 
+							lightblue 32px),
+							linear-gradient(
+							to right,
+							white 0, 
+							white 2rem, 
+							lightpink 2rem,
+							lightpink 2.2rem,
+							white 2.2rem);
 }
