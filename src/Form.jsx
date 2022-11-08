@@ -6,7 +6,9 @@ const Form = (props) => {
 
    return (
 
-        <form>
+    
+        <form onChange={props.formHandler} onSubmit={props.submitHandler}>
+
             <label htmlFor="firstname">First name:</label><br /> 
             <input type="text" name="firstname" /><br /> 
 
@@ -27,6 +29,7 @@ const Form = (props) => {
             <textarea rows="3" cols="20" name=""/><br /> 
 
             <button type="submit" >SEND</button>
+            
         </form>
             
         )

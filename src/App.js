@@ -12,20 +12,23 @@ class App extends Component {
         phone: '',
         role: '',
         message: '',
+        showModal: false,
     }
 
-    changeHandler = (e) => {
+    formHandler = (e) => {
+        e.preventDefault();
         this.setState({
             [e.target.name] : e.target.value,
         });
     };
 
-    submitHandler = (event) => {
-        event.preventDefault();
-        console.log('click');
+    submitHandler = (e) => {
+        e.preventDefault();
+        this.setState({ showModal: true });
     }
 
-    showPopup = (e) => {
+    closeModal = () => {
+        this.setState({ showModal: false });
         
     }
 
@@ -35,24 +38,32 @@ return (
 
 <div>
 
-<Form onChange={() => this.changeHandler}/>
+<h1>REACT FORMS</h1>
+<Form formHandler={this.formHandler} submitHandler={this.submitHandler}/>
 
 <View
-firstname={this.state.firstname} 
-lastname={this.state.lastname}
-number={this.state.number}
-role={this.state.role}
-message={this.state.message}
-submit={() => this.submitHandler}
+    firstname={this.state.firstname} 
+    lastname={this.state.lastname}
+    number={this.state.number}
+    role={this.state.role}
+    message={this.state.message}
 />
+
+{this.state.showModal && (
+
+    <Popup
+    closePopup={this.closePopup}
+    firstname={this.state.firstname}
+    lastname={this.state.lastname}
+    number={this.state.number}
+    role={this.state.role}
+    message={this.state.message}
+    /> )}
 
 </div>
 
-)
-
-}
-};
+)}};
 
 export default App;
 
-// {this.state.showPopup && <Popup/>}
+
