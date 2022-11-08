@@ -19,17 +19,17 @@ const Form = (props) => {
             <input type="number" name="number"/><br /> 
 
             <label htmlFor="role">Role:</label><br /> 
-            <select name="status"><br /> 
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="other">Other</option>
+            <select name="role"><br /> 
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Other">Other</option>
             </select><br /> 
 
             <label htmlFor="message">Message:</label><br /> 
-            <textarea rows="3" cols="20" name=""/><br /> 
+            <textarea rows="3" cols="20" name="message"></textarea><br /> 
 
             <button type="submit" >SEND</button>
-            
+
         </form>
             
         )

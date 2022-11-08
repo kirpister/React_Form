@@ -34,7 +34,8 @@ h3 {
 p {
   font-family: 'Indie Flower', cursive;
   margin-left: 3rem;
-  line-height: 1rem;
+  font-size: 1.3rem;
+  line-height: 0.8rem;
   color: #333;
 }
 
@@ -51,6 +52,7 @@ select {
   border: 1px solid #333;
   width: 195px;
   color: #333;
+  font-family: 'Barlow', sans-serif;
 }
 
 select {
@@ -73,7 +75,7 @@ button {
 .form-view {
   display: inline-block;
   position: absolute;
-  top: 20%;
+  top: 23%;
   right: 10%;
   width: 60vw;
   height: 33vh;

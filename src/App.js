@@ -6,7 +6,7 @@ import Popup from './Popup';
 
 class App extends Component {
 
-    state = {
+        state = {
         firstname: '',
         lastname: '',
         phone: '',
@@ -25,11 +25,12 @@ class App extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         this.setState({ showModal: true });
+        e.target.reset();
+        
     }
 
     closeModal = () => {
         this.setState({ showModal: false });
-        
     }
 
 render () {
@@ -52,7 +53,7 @@ return (
 {this.state.showModal && (
 
     <Popup
-    closePopup={this.closePopup}
+    closeModal={this.closeModal}
     firstname={this.state.firstname}
     lastname={this.state.lastname}
     number={this.state.number}
