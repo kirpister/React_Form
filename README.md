@@ -3,4 +3,4 @@
 Practice controlled components and how to handle forms with React. 
 
 
-<img width="500" alt="react_forms" src="https://user-images.githubusercontent.com/77112303/200605913-1ee07709-35d9-4b64-b629-fcb91094b2e7.png">
+<img width="700" alt="forms" src="https://user-images.githubusercontent.com/77112303/200629415-2bd2ebb4-d7c5-49a6-8edf-efab734f1d64.png">
