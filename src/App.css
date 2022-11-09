@@ -39,6 +39,10 @@ p {
   color: #333;
 }
 
+span {
+  margin-left: 1rem;
+}
+
 .text-box {
   margin-top: 2.6rem;
 }
@@ -77,8 +81,8 @@ button {
   position: absolute;
   top: 23%;
   right: 10%;
-  width: 60vw;
-  height: 33vh;
+  min-width: 60vw;
+  min-height: 33vh;
   border-radius: 1rem;
   box-shadow: 2px 2px 20px rgba(51, 51, 51, 0.783);
  	background: repeating-linear-gradient(

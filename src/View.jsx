@@ -8,11 +8,11 @@ const View = (props) => {
 
 {/* <h3>Input view</h3> */}
 <div className="text-box">
-<p>First Name: {props.firstname}</p>
-<p>Last Name: {props.lastname}</p>
-<p>Phone: {props.number}</p>
-<p>Role: {props.role}</p>
-<p>Message: {props.message}</p>
+<p>First Name: <span>{props.firstname}</span></p>
+<p>Last Name: <span>{props.lastname}</span></p>
+<p>Phone:<span>{props.number}</span></p>
+<p>Role: <span>{props.role}</span></p>
+<p>Message: <span>{props.message}</span></p>
 
 </div>
 </div>

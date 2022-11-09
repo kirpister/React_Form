@@ -10,29 +10,30 @@ const Form = (props) => {
         <form onChange={props.formHandler} onSubmit={props.submitHandler}>
 
             <label htmlFor="firstname">First name:</label><br /> 
-            <input type="text" name="firstname" /><br /> 
+            <input type="text" name="firstname" id="firstname" required /><br /> 
 
             <label htmlFor="lastname">Last name:</label><br /> 
-            <input type="text" name="lastname" /><br /> 
+            <input type="text" name="lastname" id="lastname" /><br /> 
 
             <label htmlFor="number">Phone:</label><br /> 
-            <input type="number" name="number"/><br /> 
+            <input type="tel" name="number" id="number"/><br /> 
 
             <label htmlFor="role">Role:</label><br /> 
-            <select name="role"><br /> 
+            <select name="role" id="role" defaultValue="choice"><br /> 
+            <option value="choice" disabled>Choose one</option>
             <option value="Student">Student</option>
             <option value="Teacher">Teacher</option>
             <option value="Other">Other</option>
             </select><br /> 
 
             <label htmlFor="message">Message:</label><br /> 
-            <textarea rows="3" cols="20" name="message"></textarea><br /> 
+            <textarea rows="3" cols="20" name="message" id="message"></textarea><br /> 
 
             <button type="submit" >SEND</button>
 
         </form>
             
-        )
+        );
 
     };
 
