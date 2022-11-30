@@ -1,64 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Form from './Form';
 import View from './View';
+import Notes from './Notes';
 import Popup from './Popup';
 
-class App extends Component {
+const App = () => {
 
-        state = {
-            note: { firstname: '', lastname: '', phone: '', role: '', message: '' },
-            showModal: false,
-        }
+const [note, setNote] = useState({ firstname: '', lastname: '', number:'', role:'', message:'' });
+const [showPopup, setShowpopup] = useState(false);
 
-    formHandler = (e) => {
-        this.setState({
-            note: {...this.state.note, [e.target.name] : e.target.value, }
-        });
-    }; 
+const formHandler = (e) => {
+    setNote({...note, [e.target.name]: e.target.value });
+}
 
-    // spread to open the object and get in to do fun stuff
+const submitHandler = (e) => {
+    e.preventDefault();
+    setShowpopup(true);
+    e.target.reset();
+}
 
-    submitHandler = (e) => {
-        e.preventDefault();
-        this.setState({ showModal: !this.state.showModal }); //or true
-        e.target.reset();
-    }
+const closeModal = () => {
+    window.location.reload();
+}
 
-    closeModal = () => {
-        window.location.reload();
-    }
+    return (
 
-render () {
+        <div>
 
-return (
+        <h1>REACT FORMS</h1>
 
-<div>
+        <Form formHandler={formHandler} submitHandler={submitHandler}/>
 
-<h1>REACT FORMS</h1>
+        <View {...note} />
 
-<Form formHandler={this.formHandler} submitHandler={this.submitHandler} />
+        <Notes />
 
-{/* // fancy way via ...  */}
-<View { ...this.state.note} />
+        {showPopup && (
 
-{this.state.showModal && (
-    //conditional rendering
-
-//manual way
-<Popup
-    closeModal={this.closeModal}
-    firstname={this.state.note.firstname}
-    lastname={this.state.note.lastname}
-    number={this.state.note.number}
-    role={this.state.note.role}
-    message={this.state.note.message}
-/> )}
-
-</div>
-
-)}};
+            <Popup
+            closeModal={closeModal}
+            firstname={note.firstname}
+            lastname={note.lastname}
+            number={note.number}
+            role={note.role}
+            message={note.message} /> )}
+        
+        </div>
+    );
+};
 
 export default App;
-
-

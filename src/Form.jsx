@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 
 
-const Form = (props) => {
+const Form = ({formHandler, submitHandler}) => {
 
    return (
 
     
-        <form onChange={props.formHandler} onSubmit={props.submitHandler}>
+        <form onChange={formHandler} onSubmit={submitHandler}>
 
             <label htmlFor="firstname">First name:</label><br /> 
             <input type="text" name="firstname" id="firstname" required /><br /> 
@@ -34,8 +34,7 @@ const Form = (props) => {
         </form>
             
         );
-
-    };
+};
 
 
 export default Form;

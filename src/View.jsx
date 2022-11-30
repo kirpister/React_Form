@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.css';
 
-const View = (props) => {
+const View = ({firstname, lastname, number, role, message}) => {
  return (
 
 <div className='form-view'>
 
-{/* <h3>Input view</h3> */}
 <div className="text-box">
-<p>First Name: <span>{props.firstname}</span></p>
-<p>Last Name: <span>{props.lastname}</span></p>
-<p>Phone:<span>{props.number}</span></p>
-<p>Role: <span>{props.role}</span></p>
-<p>Message: <span>{props.message}</span></p>
+<p>First Name: <span>{firstname}</span></p>
+<p>Last Name: <span>{lastname}</span></p>
+<p>Phone:<span>{number}</span></p>
+<p>Role: <span>{role}</span></p>
+<p>Message: <span>{message}</span></p>
 
 </div>
 </div>

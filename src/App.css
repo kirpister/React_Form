@@ -6,13 +6,13 @@ body {
 }
 
 form {
-  margin: 1.5rem 2rem 0 6rem;
+  margin: 1rem 2rem 0 6rem;
   display: inline-block;
 }
 
 label {
   font-family: 'Barlow', sans-serif;
-  margin: 1.1rem;
+  margin: 1rem;
   color: white;
 }
 
@@ -67,7 +67,8 @@ button {
   background: rgb(131,58,180);
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 51%, rgba(252,176,69,1) 100%);
   padding: 10px;
-  border: 1px solid white;
+  box-shadow: 2px 2px 20px rgba(51, 51, 51, 0.783);
+  border: none;
   color: white;
   width: 210px;
   border-radius: 5px;
@@ -76,48 +77,46 @@ button {
   letter-spacing: 3px;
 }
 
+/* VIEW */
+
 .form-view {
   display: inline-block;
   position: absolute;
-  top: 23%;
+  top: 20%;
   right: 10%;
   min-width: 60vw;
   min-height: 33vh;
   border-radius: 1rem;
   box-shadow: 2px 2px 20px rgba(51, 51, 51, 0.783);
- 	background: repeating-linear-gradient(
-							to bottom, 
-							transparent 0, 
-							white 30px, 
-							lightblue 30px, 
-							lightblue 32px),
-							linear-gradient(
-							to right,
-							white 0, 
-							white 2rem, 
-							lightpink 2rem,
-							lightpink 2.2rem,
-							white 2.2rem);
+ 	background: repeating-linear-gradient(to bottom, transparent 0, 
+	white 30px, 
+	lightblue 30px, 
+	lightblue 32px),
+	linear-gradient(to right,
+	white 0, 
+	white 2rem, 
+	lightpink 2rem,
+	lightpink 2.2rem,
+	white 2.2rem);
 }
+
+/* MODAL */
 
 .modal {
   width: 60vw;
   height: 40vh;
   border-radius: 1rem;
   border: 2px solid rgba(12, 12, 12, 0.7);
- 	background: repeating-linear-gradient(
-							to bottom, 
-							transparent 0, 
-							white 30px, 
-							lightblue 30px, 
-							lightblue 32px),
-							linear-gradient(
-							to right,
-							white 0, 
-							white 2rem, 
-							lightpink 2rem,
-							lightpink 2.2rem,
-							white 2.2rem);
+ 	background: repeating-linear-gradient(to bottom, transparent 0, 
+	white 30px, 
+	lightblue 30px, 
+	lightblue 32px),
+	linear-gradient(to right,
+	white 0, 
+	white 2rem, 
+	lightpink 2rem,
+	lightpink 2.2rem,
+	white 2.2rem);
 }
 
 .modal p {
@@ -142,6 +141,29 @@ button {
   align-items: center;
 }
 
-.modal button {
-  border: 1px solid #333;
+/* NOTES */
+
+.notes {
+  width: 60vw;
+  height: 33vh;
+  position: absolute;
+  bottom: 2.5rem;
+  right: 10%;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.262);
+  box-shadow: 2px 2px 20px rgba(51, 51, 51, 0.783);
+}
+
+h4 {
+  color: #333;
+  margin: 1rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+}
+
+li {
+  color: #333;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
